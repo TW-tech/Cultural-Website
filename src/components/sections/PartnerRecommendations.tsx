@@ -20,30 +20,30 @@ export default function PartnerRecommendations() {
   const partners: Partner[] = [
     {
       id: "cultural-museum",
-      name: "國際文化博物館",
-      description: "致力於保存和展示世界各地的珍貴文化遺產，擁有超過50萬件藏品，是全球最重要的文化研究機構之一。",
-      image: "/globe.svg", // 主要展示圖片
-      category: "博物館機構",
+      name: "「台語工藝詞庫」網站啟用 有助傳承台灣工藝與文化記憶",
+      description: "國立臺灣工藝研究發展中心的臺語網站，提供臺語文創、工藝知識與教學資源，推廣本土語言與文化傳承。",
+      image: "/images/partnerrecommendations/台灣工藝研究發展中心.jpg", // 主要展示圖片
+      category: "教育機構",
       established: "1985",
-      website: "www.cultural-museum.org"
+      website: "https://kanggesu.ntcri.org.tw/NTCRI_TaigiWebSite/"
     },
     {
       id: "heritage-foundation",
-      name: "世界遺產保護基金會",
-      description: "專注於世界文化遺產的保護與修復工作，已成功保護超過200個重要文化遺址，為後代保留珍貴的文化資產。",
-      image: "/window.svg", // 主要展示圖片
-      category: "保護機構",
+      name: "懷舊列車動起來 鐵道博開放搭藍皮火車賞古蹟 可預約",
+      description: "國立鐵道博物館官方網站，呈現臺灣鐵道文化脈絡，典藏珍貴文物，提供豐富導覽與教育資源，傳承歷史記憶",
+      image: "/images/partnerrecommendations/國家鐵道博物館.jpg", // 主要展示圖片
+      category: "博物館機構",
       established: "1992",
-      website: "www.heritage-foundation.org"
+      website: "https://www.nrm.gov.tw/"
     },
     {
       id: "cultural-education",
-      name: "文化教育推廣聯盟",
-      description: "推動文化教育普及化，開發創新的文化學習課程，已與全球500多所學校建立合作關係，影響超過100萬學生。",
-      image: "/vercel.svg", // 主要展示圖片
-      category: "教育機構",
+      name: "百大文化基地計畫 新北黃金山城美學廊帶7月至11月推出「礦事聚作」遊程",
+      description: "臺灣煤礦博物館官網，保存煤礦歷史記憶，展現礦業文化風華，結合教育與觀光，深入探索臺灣產業發展的軌跡。",
+      image: "/images/partnerrecommendations/新平溪煤礦博物園區.jpg", // 主要展示圖片
+      category: "保護機構",
       established: "2001",
-      website: "www.cultural-education.org"
+      website: "https://www.taiwancoal.com.tw/web/"
     }
   ];
 

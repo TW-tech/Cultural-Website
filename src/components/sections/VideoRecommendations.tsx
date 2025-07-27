@@ -14,17 +14,17 @@ export default function VideoRecommendations() {
   const videos: VideoRecommendation[] = [
     {
       id: "cultural-heritage-documentary",
-      title: "文化遺產探索紀錄片",
-      description: "深入探訪台灣各地珍貴的文化遺產，從古蹟建築到傳統工藝，用鏡頭記錄下這些承載歷史記憶的珍貴資產。透過專家學者的深度解說，帶您瞭解文化保存的重要性與挑戰。",
-      thumbnail: "/globe.svg",
+      title: "阿里山得獎咖啡如何帶地方走出創生？",
+      description: "阿里山得獎咖啡結合高山地景、職人技藝與青農返鄉行動，帶動地方產業轉型與文化重塑，成為地方創生的重要實踐案例。",
+      thumbnail: "/images/videorecommendations/阿里山咖啡園.jpg",
       duration: "25:30",
       category: "紀錄片"
     },
     {
       id: "traditional-arts-workshop",
-      title: "傳統藝術工作坊實錄",
-      description: "跟隨傳統工藝大師的腳步，學習陶藝、書法、刺繡等傳統技藝。這部影片記錄了年輕學徒與老師傅之間的技藝傳承過程，展現傳統文化在現代社會中的活力與創新。",
-      thumbnail: "/window.svg",
+      title: "竹鞘食器：在河床上的原民生態智慧體驗",
+      description: "結合魯凱傳統與環境倫理，運用竹鞘製作餐具，在河床野食中實踐無痕生活，展現原民生活智慧與自然共存的永續理念。",
+      thumbnail: "/images/videorecommendations/原民生態智慧.jpg",
       duration: "18:45",
       category: "教學"
     }

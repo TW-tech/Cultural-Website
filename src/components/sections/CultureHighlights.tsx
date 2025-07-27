@@ -13,7 +13,7 @@ export default function CultureHighlights() {
     {
       id: "traditional-arts",
       title: "文化蛋糕圖",
-      image: "/images/culture/文化品牌.jpg",
+      image: "/images/culture/可愛蛋糕圖.JPG",
       position: "top-left"
     },
     {
@@ -31,7 +31,7 @@ export default function CultureHighlights() {
     {
       id: "modern-culture",
       title: "文化品牌",
-      image: "/globe.svg",
+      image: "/images/culture/文化品牌.jpg",
       position: "bottom-right"
     }
   ];

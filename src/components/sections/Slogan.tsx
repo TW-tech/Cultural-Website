@@ -25,7 +25,7 @@ export default function Slogan() {
           <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
             <div className="relative h-24 sm:h-32 md:h-40 lg:h-48 overflow-hidden rounded-lg shadow-lg">
               <Image
-                src="/globe.svg"
+                src="/images/oldpic/老照片.jpg"
                 alt="文化探索"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -33,7 +33,7 @@ export default function Slogan() {
             </div>
             <div className="relative h-24 sm:h-32 md:h-40 lg:h-48 overflow-hidden rounded-lg shadow-lg">
               <Image
-                src="/window.svg"
+                src="/images/oldpic/老照片2.jpg"
                 alt="文化視窗"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
