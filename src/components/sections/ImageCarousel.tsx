@@ -66,11 +66,11 @@ export default function ImageCarousel() {
         {/* 標題區塊 */}
         <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-            文化畫廊
+            精選活動
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          {/* <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             精選文化影像，展現世界各地的豐富文化內涵
-          </p>
+          </p> */}
         </div>
 
         {/* 輪播容器 */}

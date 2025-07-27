@@ -1,6 +1,6 @@
 # 貢獻指南 (Contributing Guide)
 
-感謝您對 Cultural Heritage 專案的興趣！這份指南將幫助您開始貢獻代碼。
+感謝您對 Cultural Website 專案的興趣！這份指南將幫助您開始貢獻代碼。
 
 ## 🚀 快速開始
 

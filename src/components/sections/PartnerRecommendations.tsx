@@ -8,7 +8,6 @@ interface Partner {
   name: string;
   description: string;
   image: string;
-  logo: string;
   category: string;
   established: string;
   website: string;
@@ -24,7 +23,6 @@ export default function PartnerRecommendations() {
       name: "國際文化博物館",
       description: "致力於保存和展示世界各地的珍貴文化遺產，擁有超過50萬件藏品，是全球最重要的文化研究機構之一。",
       image: "/globe.svg", // 主要展示圖片
-      logo: "/file.svg", // 機構logo
       category: "博物館機構",
       established: "1985",
       website: "www.cultural-museum.org"
@@ -34,7 +32,6 @@ export default function PartnerRecommendations() {
       name: "世界遺產保護基金會",
       description: "專注於世界文化遺產的保護與修復工作，已成功保護超過200個重要文化遺址，為後代保留珍貴的文化資產。",
       image: "/window.svg", // 主要展示圖片
-      logo: "/next.svg", // 機構logo
       category: "保護機構",
       established: "1992",
       website: "www.heritage-foundation.org"
@@ -44,7 +41,6 @@ export default function PartnerRecommendations() {
       name: "文化教育推廣聯盟",
       description: "推動文化教育普及化，開發創新的文化學習課程，已與全球500多所學校建立合作關係，影響超過100萬學生。",
       image: "/vercel.svg", // 主要展示圖片
-      logo: "/globe.svg", // 機構logo
       category: "教育機構",
       established: "2001",
       website: "www.cultural-education.org"
@@ -87,17 +83,6 @@ export default function PartnerRecommendations() {
                 />
                 {/* 漸變遮罩 */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                
-                {/* 機構Logo */}
-                <div className="absolute top-6 right-6 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg">
-                  <Image
-                    src={partner.logo}
-                    alt={`${partner.name} Logo`}
-                    width={32}
-                    height={32}
-                    className="w-8 h-8"
-                  />
-                </div>
 
                 {/* 分類標籤 */}
                 <div className="absolute top-6 left-6 bg-blue-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">

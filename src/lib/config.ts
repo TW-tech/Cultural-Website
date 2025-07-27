@@ -1,7 +1,7 @@
 // 網站配置
 export const siteConfig = {
-  name: "Cultural Heritage",
-  title: "Cultural Heritage - 文化傳承網站",
+  name: "Cultural Website",
+  title: "Cultural Website - 文化傳承網站",
   description: "保存和分享世界文化多樣性，透過數位說故事和社群參與來傳承文化",
   url: "https://cultural-heritage.example.com",
   ogImage: "/images/mainvisual/entry_pic.jpg",

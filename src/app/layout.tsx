@@ -3,7 +3,7 @@ import { fontVariables } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Cultural Heritage - 文化傳承網站",
+  title: "Cultural Website - 文化傳承網站",
   description: "保存和分享世界文化多樣性，透過數位說故事和社群參與來傳承文化",
 };
 

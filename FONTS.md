@@ -98,7 +98,7 @@ fontFamily: {
 <p className="font-body text-base">傳承文化之美</p>
 
 // 英文內容
-<p className="font-english text-base">Cultural Heritage</p>
+<p className="font-english text-base">Cultural Website</p>
 ```
 
 ### CSS 變數

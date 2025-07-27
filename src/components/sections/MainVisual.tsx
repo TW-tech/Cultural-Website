@@ -82,7 +82,7 @@ export default function MainVisual() {
             ref={subtitleRef}
             className="font-title text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light mb-6 sm:mb-8 text-shadow-md text-amber-50"
           >
-            探索世界多元文化之美
+            探索文化之美
           </h2>
           <p 
             ref={descriptionRef}
@@ -91,18 +91,7 @@ export default function MainVisual() {
             踏上一段穿越時空的文化旅程，發現各民族獨特的傳統、藝術與智慧
           </p>
           
-          {/* 操作按鈕 */}
-          <div 
-            ref={buttonsRef}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
-          >
-            <button className="w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg">
-              開始探索
-            </button>
-            <button className="w-full sm:w-auto border-2 border-amber-100 text-amber-100 hover:bg-amber-100 hover:text-amber-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium transition-all duration-300 transform hover:scale-105">
-              了解更多
-            </button>
-          </div>
+          
         </div>
         
         {/* 向下滾動指示器 */}
