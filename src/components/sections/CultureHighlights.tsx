@@ -12,7 +12,7 @@ export default function CultureHighlights() {
   const cultureItems: CultureKnowledge[] = [
     {
       id: "traditional-arts",
-      title: "傳統藝術",
+      title: "文化蛋糕圖",
       image: "/images/culture/文化品牌.jpg",
       position: "top-left"
     },
@@ -30,7 +30,7 @@ export default function CultureHighlights() {
     },
     {
       id: "modern-culture",
-      title: "現代文化",
+      title: "文化品牌",
       image: "/globe.svg",
       position: "bottom-right"
     }
