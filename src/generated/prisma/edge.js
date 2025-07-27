@@ -107,7 +107,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/katydu/Desktop/cultural-website/src/generated/prisma",
+      "value": "C:\\Users\\hihis\\WebDev\\Cultural-Website\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -116,17 +116,16 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "darwin-arm64",
+        "value": "windows",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/katydu/Desktop/cultural-website/prisma/schema.prisma",
+    "sourceFilePath": "C:\\Users\\hihis\\WebDev\\Cultural-Website\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
-    "schemaEnvPath": "../../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../../prisma",
   "clientVersion": "6.12.0",
