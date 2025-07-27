@@ -65,7 +65,7 @@ export default function ImageCarousel() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 標題區塊 */}
         <div className="text-center mb-6 sm:mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <h2 className="font-chenyuluoyan text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
             精選活動
           </h2>
           {/* <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
