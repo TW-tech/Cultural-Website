@@ -37,10 +37,3 @@ export const inter = Inter({
 
 // 導出字體變數用於 Tailwind CSS
 export const fontVariables = `${chenyuluoyan.variable} ${thePeakFont.variable} ${inter.variable}`;
-
-// 導出字體類別名稱
-export const fonts = {
-  title: 'var(--font-chenyuluoyan)',
-  body: 'var(--font-thepeak)',
-  english: 'var(--font-inter)',
-};

@@ -25,13 +25,12 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // 標題字體 - 辰宇落雁體
-        'title': ['var(--font-chenyuluoyan)', 'serif'],
-        // 內文字體 - 隨峰體
-        'body': ['var(--font-thepeak)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        // 英文字體 - Inter
-        'english': ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        // 英文字體 - Inter (預設)
         'sans': ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        // 辰宇落雁體 - 用於標題
+        'chenyuluoyan': ['var(--font-chenyuluoyan)', 'serif'],
+        // 隨峰體 - 用於內文
+        'thepeak': ['var(--font-thepeak)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

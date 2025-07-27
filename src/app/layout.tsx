@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body
-        className={`${fontVariables} font-body antialiased`}
+        className={`${fontVariables} antialiased`}
       >
         {children}
       </body>

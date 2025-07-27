@@ -1,5 +1,15 @@
 node_modules
 .next
 dist
-.env
 .DS_Store
+# Ignore Prisma SQLite database
+prisma/dev.db
+prisma/dev.db-journal
+
+# Ignore Prisma generated client (optional)
+node_modules/
+prisma/generated/
+
+# Ignore environment files
+.env
+.env.*
