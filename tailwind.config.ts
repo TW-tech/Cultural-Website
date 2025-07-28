@@ -27,8 +27,6 @@ const config: Config = {
       fontFamily: {
         // 英文字體 - Inter (預設)
         'sans': ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        // 辰宇落雁體 - 用於標題
-        'chenyuluoyan': ['var(--font-chenyuluoyan)', 'serif'],
         // 隨峰體 - 用於內文
         'thepeak': ['var(--font-thepeak)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },

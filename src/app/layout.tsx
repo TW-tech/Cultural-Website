@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { fontVariables } from "@/lib/fonts";
 import "./globals.css";
+import { thePeakFont } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Cultural Website - 文化傳承網站",
@@ -14,9 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-TW">
-      <body
-        className={`${fontVariables} antialiased`}
-      >
+      <body className={thePeakFont.className}>
         {children}
       </body>
     </html>

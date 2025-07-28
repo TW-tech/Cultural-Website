@@ -1,18 +1,6 @@
 import localFont from 'next/font/local';
 import { Inter } from 'next/font/google';
 
-// 辰宇落雁體 - 用於標題
-export const chenyuluoyan = localFont({
-  src: [
-    {
-      path: '../../public/fonts/ChenYuluoyan-2.0-Thin.ttf',
-      weight: '300',
-      style: 'normal',
-    }
-  ],
-  variable: '--font-chenyuluoyan',
-  display: 'swap',
-});
 
 // 隨峰體 - 用於內文
 export const thePeakFont = localFont({
@@ -34,6 +22,3 @@ export const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
 });
-
-// 導出字體變數用於 Tailwind CSS
-export const fontVariables = `${chenyuluoyan.variable} ${thePeakFont.variable} ${inter.variable}`;
