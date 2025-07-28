@@ -25,6 +25,7 @@ const chenyuluoyan = localFont({
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
+
       {/* 主視覺區塊 - 手繪大圖 */}
       <MainVisual />
       
