@@ -15,7 +15,7 @@ export default function Slogan() {
             <p className="text-sm sm:text-base lg:text-lg text-white-700 leading-relaxed">
               透過現代科技與傳統文化的結合，我們能夠以全新的方式體驗和理解這些珍貴的文化遺產。
             </p>
-            <p className="text-[40px] sm:text-[40px] lg:text-[40px] text-white-700 leading-relaxed">
+            <p className="text-[40px] sm:text-[40px] lg:text-[40px] text-white-700 leading-relaxed text-right">
               文化記憶與我們
             </p>
           </div>
