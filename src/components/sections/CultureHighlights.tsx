@@ -13,7 +13,7 @@ export default function CultureHighlights() {
     {
       id: "traditional-arts",
       title: "文化蛋糕圖",
-      image: "/images/culture/可愛蛋糕圖.JPG",
+      image: "/images/culture/羽化黑熊.png",
       position: "top-left"
     },
     {
@@ -37,18 +37,13 @@ export default function CultureHighlights() {
   ];
 
   return (
-    <section className="py-8 sm:py-10 lg:py-12 bg-gradient-to-br from-gray-50 to-slate-100">
+    <section className="py-8 sm:py-10 lg:py-12 bg-[#FAF9EB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 標題區塊 */}
-        <div className="text-center mb-8 sm:mb-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-            文化知識
-          </h2>
-        </div>
+        
         
         {/* 文化知識容器 - 長方形 2x2 排列 */}
         <div className="w-full">
-          <div className="aspect-[3/2] sm:aspect-[2/1] grid grid-cols-2 grid-rows-2 gap-1 sm:gap-2 lg:gap-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden">
+          <div className="aspect-[3/2] sm:aspect-[2/1] grid grid-cols-2 grid-rows-2 gap-1 sm:gap-2 lg:gap-4 bg-[#FAF9EB] sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden">
             {cultureItems.map((item) => (
               <div 
                 key={item.id}

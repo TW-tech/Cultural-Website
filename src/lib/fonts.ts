@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 export const chenyuluoyan = localFont({
   src: [
     {
-      path: '/fonts/ChenYuluoyan-2.0-Thin.ttf',
+      path: '../../public/fonts/ChenYuluoyan-2.0-Thin.ttf',
       weight: '300',
       style: 'normal',
     }
@@ -18,7 +18,7 @@ export const chenyuluoyan = localFont({
 export const thePeakFont = localFont({
   src: [
     {
-      path: '/fonts/ThePeakFontBeta_V0_102.ttf',
+      path: '../../public/fonts/ThePeakFontBeta_V0_102.ttf',
       weight: '400',
       style: 'normal',
     }

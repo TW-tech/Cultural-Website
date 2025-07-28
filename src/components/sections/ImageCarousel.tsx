@@ -30,10 +30,10 @@ export default function ImageCarousel() {
     },
     {
       id: 3,
-      src: "/images/museums/故宮_浮世之美.jpg",
-      alt: "故宮浮世之美",
-      title: "故宮浮世之美",
-      description: "故宮博物院特展，呈現東方藝術的深厚底蘊"
+      src: "/images/museums/田中.jpg",
+      alt: "田中",
+      title: "田中",
+      description: "田中達也特展-大師眼中的微型組合"
     }
   ];
 
@@ -61,22 +61,14 @@ export default function ImageCarousel() {
   };
 
   return (
-    <section className="py-8 sm:py-10 lg:py-12 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-8 sm:py-10 lg:py-12 bg-[#FAF9EB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 標題區塊 */}
-        <div className="text-center mb-6 sm:mb-8">
-          <h2 className="font-chenyuluoyan text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-            精選活動
-          </h2>
-          {/* <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            精選文化影像，展現世界各地的豐富文化內涵
-          </p> */}
-        </div>
+        
 
         {/* 輪播容器 */}
         <div className="relative max-w-6xl mx-auto">
           {/* 主要輪播區域 */}
-          <div className="relative h-[18rem] sm:h-[24rem] lg:h-[28rem] bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <div className="relative h-[18rem] sm:h-[24rem] lg:h-[48rem] bg-white rounded-2xl shadow-2xl overflow-hidden">
             {carouselImages.map((image, index) => (
               <div
                 key={index}
@@ -135,27 +127,7 @@ export default function ImageCarousel() {
             ))}
           </div>
 
-          {/* 縮圖預覽 */}
-          <div className="hidden md:flex justify-center mt-6 space-x-4">
-            {carouselImages.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`relative w-20 h-16 rounded-lg overflow-hidden transition-all duration-300 ${
-                  index === currentSlide
-                    ? 'ring-4 ring-orange-500 scale-110'
-                    : 'ring-2 ring-gray-200 hover:ring-gray-300 opacity-70 hover:opacity-100'
-                }`}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                />
-              </button>
-            ))}
-          </div>
+          
         </div>
       </div>
     </section>

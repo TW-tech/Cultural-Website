@@ -55,11 +55,11 @@ export default function MainVisual() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] max-h-[1080px] overflow-hidden">
+    <section className="relative w-full h-screen min-h-[600px] max-h-[1080px] overflow-hidden bg-[#A47C52]">
       {/* 背景大圖 */}
       <div className="absolute inset-0">
         <Image
-          src="/images/mainvisual/entry_pic.jpg"
+          src="/images/mainvisual/entry_pic2.jpg"
           alt="文化網站主視覺"
           fill
           className="object-cover"

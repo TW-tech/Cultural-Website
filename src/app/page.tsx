@@ -13,7 +13,7 @@ import localFont from 'next/font/local';
 const chenyuluoyan = localFont({
   src: [
     {
-      path: '/fonts/ChenYuluoyan-2.0-Thin.ttf',
+      path: '../../public/fonts/ChenYuluoyan-2.0-Thin.ttf',
       weight: '300',
       style: 'normal',
     }

@@ -31,14 +31,9 @@ export default function VideoRecommendations() {
   ];
 
   return (
-    <section className="py-8 sm:py-10 lg:py-12 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section className="py-8 sm:py-10 lg:py-12 bg-[#122617]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 標題區塊 */}
-        <div className="text-center mb-8 sm:mb-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-            影音推薦
-          </h2>
-        </div>
+        
         
         {/* 影音卡片 - 2個格子 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
@@ -98,15 +93,7 @@ export default function VideoRecommendations() {
           ))}
         </div>
 
-        {/* 底部更多影片區塊 */}
-        <div className="text-center mt-8 sm:mt-10">
-          <p className="text-base text-gray-600 mb-4">
-            還有更多精彩的文化影音內容等您探索
-          </p>
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-base font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-            觀看更多影片
-          </button>
-        </div>
+        
       </div>
     </section>
   );

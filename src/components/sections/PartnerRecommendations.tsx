@@ -53,14 +53,11 @@ export default function PartnerRecommendations() {
   };
 
   return (
-    <section className="py-8 sm:py-10 lg:py-12 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section className="py-8 sm:py-10 lg:py-12 bg-[#FAF9EB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 標題區塊 */}
         <div className="text-center mb-8 sm:mb-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-            合作夥伴推薦
-          </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-chenyuluoyan text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             與我們攜手合作的優秀機構，共同致力於文化傳承與推廣的重要使命
           </p>
         </div>
@@ -128,15 +125,7 @@ export default function PartnerRecommendations() {
           ))}
         </div>
 
-        {/* 底部說明 */}
-        <div className="text-center mt-8 sm:mt-10">
-          <p className="text-base text-gray-600 mb-4">
-            想成為我們的合作夥伴？
-          </p>
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-base font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-            聯繫我們
-          </button>
-        </div>
+        
       </div>
     </section>
   );
