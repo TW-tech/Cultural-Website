@@ -76,14 +76,14 @@ export default function MainVisual() {
             ref={titleRef}
             className="font-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-shadow-lg leading-tight text-amber-100"
           >
-            文化傳承
+            文化記憶庫
           </h1>
-          <h2 
+          {/*<h2 
             ref={subtitleRef}
             className="font-title text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light mb-6 sm:mb-8 text-shadow-md text-amber-50"
           >
             探索文化之美
-          </h2>
+          </h2>8*/}
           <p 
             ref={descriptionRef}
             className="font-body text-sm sm:text-base md:text-lg lg:text-xl mb-8 sm:mb-12 text-shadow-md max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl mx-auto leading-relaxed text-slate-100"
