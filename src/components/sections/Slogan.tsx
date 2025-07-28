@@ -7,8 +7,8 @@ export default function Slogan() {
         <div className="grid grid-cols-1 lg:grid-cols-[9fr_7fr] overflow-hidden rounded-lg">
 
           {/* 左側文字敘述 */}
-          <div className="flex items-center h-full p-6 bg-[#103638] ">
-          <div className="space-y-3 sm:space-y-4 lg:space-y-6 h-full ">
+          <div className="flex items-center h-full p-6 bg-[#103638] relative">
+          <div className="space-y-3 sm:space-y-4 lg:space-y-6 h-full pr-16">
             <p className="text-sm sm:text-base lg:text-lg text-white-700 leading-relaxed item ">
               文化是人類智慧的結晶，承載著歷史的記憶與文明的傳承。
             </p>
@@ -19,10 +19,14 @@ export default function Slogan() {
               文化記憶與我們
             </p>
           </div>
+          {/* 右邊緣漸層遮罩 - 調整位置避免覆蓋文字 */}
+          <div className="absolute top-0 right-0 w-12 h-full bg-gradient-to-r from-[#103638] to-transparent pointer-events-none z-10"></div>
           </div>
 
           {/* 右側圖片區域 */}
-          <div className="h-full bg-[#103638]">
+          <div className="h-full relative">
+            {/* 左邊緣漸層遮罩 */}
+            <div className="absolute top-0 left-0 w-12 h-full bg-gradient-to-r from-[#103638] to-transparent pointer-events-none z-20"></div>
             <div className=" h-full">
               <div className="relative w-full min-h-[200px] sm:min-h-0 sm:h-full overflow-hidden">
                 <Image
