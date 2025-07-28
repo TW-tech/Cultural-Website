@@ -1,10 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
 export default function MainVisual() {
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('中文');
+  
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLHeadingElement>(null);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
@@ -56,6 +59,89 @@ export default function MainVisual() {
 
   return (
     <section className="relative w-full h-screen min-h-[600px] max-h-[1080px] overflow-hidden bg-[#A47C52]">
+      {/* header */}
+      
+      {/* 功能列 */}
+      <nav className="absolute top-4 left-0 right-0 z-20 flex justify-between items-center px-6">
+        {/* 左側三槓和語言切換 */}
+        <div className="flex items-center space-x-4">
+          {/* 三槓按鈕 */}
+          <button className="flex flex-col justify-center items-center space-y-1 p-2 hover:bg-white/10 rounded-lg transition-colors duration-200">
+            <div className="w-6 h-0.5 bg-white rounded-full"></div>
+            <div className="w-6 h-0.5 bg-white rounded-full"></div>
+            <div className="w-6 h-0.5 bg-white rounded-full"></div>
+          </button>
+          
+          {/* 語言切換按鈕 - 地球圖標 */}
+          <div className="relative">
+            <button 
+              className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200 flex items-center space-x-1" 
+              title="切換語言"
+              onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+            >
+              <svg className="w-5 h-5 text-white hover:text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" strokeWidth={1.5}/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" strokeWidth={1.5}/>
+                <path d="M2 12h20" strokeWidth={1.5}/>
+              </svg>
+              <span className="text-xs text-white">{currentLanguage}</span>
+            </button>
+            
+            {/* 下拉選單 */}
+            {isLanguageOpen && (
+              <div className="absolute top-full left-0 mt-2 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden min-w-[120px] z-30">
+                <button
+                  className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100 transition-colors duration-200 text-sm"
+                  onClick={() => {
+                    setCurrentLanguage('中文');
+                    setIsLanguageOpen(false);
+                  }}
+                >
+                  🇹🇼 中文
+                </button>
+                <button
+                  className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100 transition-colors duration-200 text-sm"
+                  onClick={() => {
+                    setCurrentLanguage('English');
+                    setIsLanguageOpen(false);
+                  }}
+                >
+                  🇺🇸 English
+                </button>
+                <button
+                  className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100 transition-colors duration-200 text-sm"
+                  onClick={() => {
+                    setCurrentLanguage('日本語');
+                    setIsLanguageOpen(false);
+                  }}
+                >
+                  🇯🇵 日本語
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+        
+        {/* 右側功能選項 */}
+        <div className="flex space-x-6">
+          <a href="/" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
+            首頁
+          </a>
+          <a href="/about" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
+            關於我們
+          </a>
+          <a href="/culture" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
+            文化探索
+          </a>
+          <a href="/gallery" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
+            影像藝廊
+          </a>
+          <a href="/contact" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
+            聯絡我們
+          </a>
+        </div>
+      </nav>
+
       {/* 背景大圖 */}
       <div className="absolute inset-0">
         <Image
