@@ -66,7 +66,7 @@ export default function ImageCarousel() {
         
 
         {/* 輪播容器 */}
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-6xl mx-auto group">
           {/* 主要輪播區域 */}
           <div className="relative h-[18rem] sm:h-[24rem] lg:h-[48rem] bg-white rounded-2xl shadow-2xl overflow-hidden">
             {carouselImages.map((image, index) => (
@@ -90,10 +90,10 @@ export default function ImageCarousel() {
             ))}
           </div>
 
-          {/* 控制按鈕 */}
+          {/* 控制按鈕 - 只在 hover 時顯示 */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10 opacity-0 group-hover:opacity-100"
             aria-label="上一張圖片"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,7 +103,7 @@ export default function ImageCarousel() {
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10 opacity-0 group-hover:opacity-100"
             aria-label="下一張圖片"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
