@@ -53,12 +53,12 @@ export default function PartnerRecommendations() {
   };
 
   return (
-    <section className="py-8 sm:py-10 lg:py-12 bg-[#FAF9EB]">
+    <section className="pt-4 pb-2 sm:pt-6 sm:pb-3 lg:pt-8 lg:pb-4 bg-[#FAF9EB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 標題區塊 */}
         <div className="text-center mb-8 sm:mb-10">
-          <p className="font-chenyuluoyan text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            與我們攜手合作的優秀機構，共同致力於文化傳承與推廣的重要使命
+          <p className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 max-w-3xl mx-auto leading-relaxed">
+            合作夥伴推薦
           </p>
         </div>
         
