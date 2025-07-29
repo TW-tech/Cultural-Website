@@ -8,20 +8,6 @@ import {
   Footer 
 } from '@/components';
 
-import localFont from 'next/font/local';
-
-const chenyuluoyan = localFont({
-  src: [
-    {
-      path: '../../public/fonts/ChenYuluoyan-2.0-Thin.ttf',
-      weight: '300',
-      style: 'normal',
-    }
-  ],
-  variable: '--font-chenyuluoyan',
-  display: 'swap',
-});
-
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
