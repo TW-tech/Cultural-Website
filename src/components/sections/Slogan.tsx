@@ -10,7 +10,7 @@ export default function Slogan() {
           <div className="flex items-center h-full p-4 sm:p-6 bg-[#103638] relative order-2 lg:order-1">
           <div className="space-y-3 sm:space-y-4 lg:space-y-6 h-full pr-4 sm:pr-8 lg:pr-16 w-full flex flex-col justify-center">
             <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed">
-              文化是人類智慧的結晶，承載著歷史的記憶與文明的傳承。
+              文化是人類智慧的結晶，承載著歷史的記憶與文明的傳承!
             </p>
             <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed">
               透過現代科技與傳統文化的結合，我們能夠以全新的方式體驗和理解這些珍貴的文化遺產。
