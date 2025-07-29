@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 
 interface VideoRecommendation {
@@ -10,8 +13,39 @@ interface VideoRecommendation {
 }
 
 export default function VideoRecommendations() {
-  // 影音推薦數據
   const videos: VideoRecommendation[] = [
+     {
+      id: "cultural-heritage-documentary",
+      title: "阿里山得獎咖啡如何帶地方走出創生？",
+      description: "阿里山得獎咖啡結合高山地景、職人技藝與青農返鄉行動，帶動地方產業轉型與文化重塑，成為地方創生的重要實踐案例。",
+      thumbnail: "/images/videorecommendations/阿里山咖啡園.jpg",
+      duration: "25:30",
+      category: "紀錄片"
+    },
+    {
+      id: "traditional-arts-workshop",
+      title: "竹鞘食器：在河床上的原民生態智慧體驗",
+      description: "結合魯凱傳統與環境倫理，運用竹鞘製作餐具，在河床野食中實踐無痕生活，展現原民生活智慧與自然共存的永續理念。",
+      thumbnail: "/images/videorecommendations/原民生態智慧.jpg",
+      duration: "18:45",
+      category: "教學"
+    },
+     {
+      id: "cultural-heritage-documentary",
+      title: "阿里山得獎咖啡如何帶地方走出創生？",
+      description: "阿里山得獎咖啡結合高山地景、職人技藝與青農返鄉行動，帶動地方產業轉型與文化重塑，成為地方創生的重要實踐案例。",
+      thumbnail: "/images/videorecommendations/阿里山咖啡園.jpg",
+      duration: "25:30",
+      category: "紀錄片"
+    },
+    {
+      id: "traditional-arts-workshop",
+      title: "竹鞘食器：在河床上的原民生態智慧體驗",
+      description: "結合魯凱傳統與環境倫理，運用竹鞘製作餐具，在河床野食中實踐無痕生活，展現原民生活智慧與自然共存的永續理念。",
+      thumbnail: "/images/videorecommendations/原民生態智慧.jpg",
+      duration: "18:45",
+      category: "教學"
+    },
     {
       id: "cultural-heritage-documentary",
       title: "阿里山得獎咖啡如何帶地方走出創生？",
@@ -27,20 +61,144 @@ export default function VideoRecommendations() {
       thumbnail: "/images/videorecommendations/原民生態智慧.jpg",
       duration: "18:45",
       category: "教學"
-    }
+    },
+    {
+      id: "cultural-heritage-documentary",
+      title: "阿里山得獎咖啡如何帶地方走出創生？",
+      description: "阿里山得獎咖啡結合高山地景、職人技藝與青農返鄉行動，帶動地方產業轉型與文化重塑，成為地方創生的重要實踐案例。",
+      thumbnail: "/images/videorecommendations/阿里山咖啡園.jpg",
+      duration: "25:30",
+      category: "紀錄片"
+    },
+    {
+      id: "traditional-arts-workshop",
+      title: "竹鞘食器：在河床上的原民生態智慧體驗",
+      description: "結合魯凱傳統與環境倫理，運用竹鞘製作餐具，在河床野食中實踐無痕生活，展現原民生活智慧與自然共存的永續理念。",
+      thumbnail: "/images/videorecommendations/原民生態智慧.jpg",
+      duration: "18:45",
+      category: "教學"
+    },
+    {
+      id: "cultural-heritage-documentary",
+      title: "阿里山得獎咖啡如何帶地方走出創生？",
+      description: "阿里山得獎咖啡結合高山地景、職人技藝與青農返鄉行動，帶動地方產業轉型與文化重塑，成為地方創生的重要實踐案例。",
+      thumbnail: "/images/videorecommendations/阿里山咖啡園.jpg",
+      duration: "25:30",
+      category: "紀錄片"
+    },
+    {
+      id: "traditional-arts-workshop",
+      title: "竹鞘食器：在河床上的原民生態智慧體驗",
+      description: "結合魯凱傳統與環境倫理，運用竹鞘製作餐具，在河床野食中實踐無痕生活，展現原民生活智慧與自然共存的永續理念。",
+      thumbnail: "/images/videorecommendations/原民生態智慧.jpg",
+      duration: "18:45",
+      category: "教學"
+    },
+    {
+      id: "cultural-heritage-documentary",
+      title: "阿里山得獎咖啡如何帶地方走出創生？",
+      description: "阿里山得獎咖啡結合高山地景、職人技藝與青農返鄉行動，帶動地方產業轉型與文化重塑，成為地方創生的重要實踐案例。",
+      thumbnail: "/images/videorecommendations/阿里山咖啡園.jpg",
+      duration: "25:30",
+      category: "紀錄片"
+    },
+    {
+      id: "traditional-arts-workshop",
+      title: "竹鞘食器：在河床上的原民生態智慧體驗",
+      description: "結合魯凱傳統與環境倫理，運用竹鞘製作餐具，在河床野食中實踐無痕生活，展現原民生活智慧與自然共存的永續理念。",
+      thumbnail: "/images/videorecommendations/原民生態智慧.jpg",
+      duration: "18:45",
+      category: "教學"
+    },
+    // ➕ Add more if needed
   ];
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const VideoRef = useRef<HTMLDivElement>(null);
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Check if arrows should show
+  const checkScroll = () => {
+    if (!scrollRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+    setShowLeft(scrollLeft > 0);
+    setShowRight(scrollLeft + clientWidth < scrollWidth - 1);
+  };
+
+  useEffect(() => {
+    checkScroll();
+    const el = scrollRef.current;
+    if (el) el.addEventListener("scroll", checkScroll);
+    return () => el?.removeEventListener("scroll", checkScroll);
+  }, []);
+
+  //move per video width
+  /*const scroll = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const VidWidth  = (VideoRef.current ? VideoRef.current.offsetWidth : 0) + 24;
+    const ContainerWidth = scrollRef.current.clientWidth;
+    const amount = Math.floor(ContainerWidth / VidWidth) * VidWidth;
+    console.log("vidwith="+VidWidth);
+
+    scrollRef.current.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
+  };*/
+  //fix movement
+  const scroll = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const amount = scrollRef.current.clientWidth * 0.4;
+    scrollRef.current.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
+  };
+   
+
+
   return (
-    <section className="py-8 sm:py-10 lg:py-12 bg-[#122617]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        
-        {/* 影音卡片 - 2個格子 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+    <section
+      className="relative py-8 sm:py-10 lg:py-12 bg-[#122617]"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+        {/* 標題區塊 */}
+        <div className="absolute top-1.5 left-1/2 -translate-x-1/2 z-10 text-white text-lg font-semibold">
+          影音推薦
+        </div>
+        <div className=" mx-auto px-0 sm:px-0 lg:px-0 relative">
+        {/* 漸層遮罩 */}
+        <div className="absolute left-0 w-16 sm:w-12 lg:w-60 h-full bg-gradient-to-r from-[#122617] to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 w-16 sm:w-12 lg:w-60 h-full bg-gradient-to-l from-[#122617] to-transparent pointer-events-none z-10"></div>
+        {/* Arrow buttons */}
+        {isHovered && showLeft && (
+          <button
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/0 rounded-full shadow hover:bg-white/10"
+            onClick={() => scroll("left")}
+          >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+        )}
+        {isHovered && showRight && (
+          <button
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/0 rounded-full shadow hover:bg-white/10"
+            onClick={() => scroll("right")}
+          >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        )}
+
+        {/* Scrollable video list */}
+        <div
+          ref={scrollRef}
+          className="flex space-x-6 overflow-x-auto scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden scrollbar-hide"
+        >
           {videos.map((video) => (
-            <div 
+            <div
               key={video.id}
-              className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer overflow-hidden border border-gray-100"
+              ref={VideoRef}
+              className="group relative min-w-[280px] sm:min-w-[320px] lg:min-w-[400px] bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer overflow-hidden border border-gray-100 first:ml-30 last:mr-30"
             >
               {/* 影片縮圖區域 */}
               <div className="relative h-64 sm:h-80 overflow-hidden">
@@ -50,12 +208,12 @@ export default function VideoRecommendations() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                
+
                 {/* 影片播放圖示 */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-8 h-8 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
+                      <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
                 </div>
@@ -73,16 +231,12 @@ export default function VideoRecommendations() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
                 <div className="p-6 text-white">
                   <h3 className="text-xl font-bold mb-3">{video.title}</h3>
-                  <p className="text-sm leading-relaxed text-gray-200">
-                    {video.description}
-                  </p>
+                  <p className="text-sm leading-relaxed text-gray-200">{video.description}</p>
                   <div className="mt-4 flex items-center justify-between">
                     <span className="text-sm bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
                       {video.category}
                     </span>
-                    <span className="text-sm font-medium">
-                      {video.duration}
-                    </span>
+                    <span className="text-sm font-medium">{video.duration}</span>
                   </div>
                 </div>
               </div>
@@ -92,8 +246,6 @@ export default function VideoRecommendations() {
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );

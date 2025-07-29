@@ -43,7 +43,7 @@ export default function Footer() {
                 alt="Cultural Website Logo"
                 width={140}
                 height={20}
-                className="w-[100px] sm:w-[140px] lg:w-[200px] h-auto mt-4 filter invert"
+                className="w-[300px] sm:w-[140px] lg:w-[300px] h-auto mt-4 "
               />
             </div>
           </div>
