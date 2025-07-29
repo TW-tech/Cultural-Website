@@ -17,5 +17,4 @@ prisma/generated/
 node_modules/
 .next/
 out/
-public/
 *.config.js
