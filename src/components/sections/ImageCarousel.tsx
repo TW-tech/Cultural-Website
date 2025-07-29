@@ -3,14 +3,6 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-interface CarouselImage {
-  src: string;
-  alt: string;
-  title: string;
-  width: number;
-  height: number;
-}
-
 export default function ImageCarousel() {
   // 輪播圖片數據 (使用原始尺寸比例)
   const carouselImages = [
@@ -64,49 +56,91 @@ export default function ImageCarousel() {
     <section className="py-8 sm:py-10 lg:py-12 bg-[#FAF9EB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-
         {/* 輪播容器 */}
         <div className="relative max-w-6xl mx-auto group">
-          {/* 主要輪播區域 */}
-          <div className="relative h-[18rem] sm:h-[24rem] lg:h-[48rem] bg-white rounded-2xl shadow-2xl overflow-hidden">
-            {carouselImages.map((image, index) => (
-              <div
-                key={index}
-                className={`absolute inset-0 transition-opacity duration-1000 flex items-center justify-center p-6 ${
-                  index === currentSlide ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                {/* 圖片容器 - 保持原比例 */}
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-contain rounded-lg shadow-lg"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
-                  />
+          {/* 三圖輪播區域 - 中間主圖，左右預覽 */}
+          <div className="relative h-[20rem] sm:h-[16rem] lg:h-[24rem] flex items-center justify-center gap-4 lg:gap-8">
+            
+            {/* 左側預覽圖 */}
+            <div className="hidden sm:block relative w-[18%] h-[60%] lg:h-[70%] opacity-60 hover:opacity-80 transition-all duration-300 cursor-pointer transform hover:scale-105">
+              <div className="relative w-full h-full rounded-xl shadow-lg overflow-hidden"
+                   onClick={prevSlide}>
+                <Image
+                  src={carouselImages[(currentSlide - 1 + carouselImages.length) % carouselImages.length].src}
+                  alt={carouselImages[(currentSlide - 1 + carouselImages.length) % carouselImages.length].alt}
+                  fill
+                  className="object-cover"
+                  sizes="18vw"
+                />
+                {/* 左箭頭覆蓋層 */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* 中間主圖 */}
+            <div className="relative w-full sm:w-[64%] h-full rounded-2xl shadow-2xl overflow-hidden">
+              <Image
+                src={carouselImages[currentSlide].src}
+                alt={carouselImages[currentSlide].alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 64vw"
+                priority
+              />
+              
+              {/* 主圖標題和描述 */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
+                  {carouselImages[currentSlide].title}
+                </h3>
+                <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                  {carouselImages[currentSlide].description}
+                </p>
+              </div>
+            </div>
+
+            {/* 右側預覽圖 */}
+            <div className="hidden sm:block relative w-[18%] h-[60%] lg:h-[70%] opacity-60 hover:opacity-80 transition-all duration-300 cursor-pointer transform hover:scale-105">
+              <div className="relative w-full h-full rounded-xl shadow-lg overflow-hidden"
+                   onClick={nextSlide}>
+                <Image
+                  src={carouselImages[(currentSlide + 1) % carouselImages.length].src}
+                  alt={carouselImages[(currentSlide + 1) % carouselImages.length].alt}
+                  fill
+                  className="object-cover"
+                  sizes="18vw"
+                />
+                {/* 右箭頭覆蓋層 */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* 控制按鈕 - 手機版始終顯示，桌面版 hover 顯示 */}
+          {/* 手機版控制按鈕 */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10 opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
+            className="sm:hidden absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 z-10"
             aria-label="上一張圖片"
           >
-            <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10 opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
+            className="sm:hidden absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 z-10"
             aria-label="下一張圖片"
           >
-            <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -127,7 +161,6 @@ export default function ImageCarousel() {
             ))}
           </div>
 
-          
         </div>
       </div>
     </section>
