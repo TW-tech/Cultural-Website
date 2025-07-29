@@ -134,7 +134,8 @@ export default function VideoRecommendations() {
     return () => el?.removeEventListener("scroll", checkScroll);
   }, []);
 
-  const scroll = (direction: "left" | "right") => {
+  //move per video width
+  /*const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
     const VidWidth  = (VideoRef.current ? VideoRef.current.offsetWidth : 0) + 24;
     const ContainerWidth = scrollRef.current.clientWidth;
@@ -142,30 +143,49 @@ export default function VideoRecommendations() {
     console.log("vidwith="+VidWidth);
 
     scrollRef.current.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
+  };*/
+  //fix movement
+  const scroll = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const amount = scrollRef.current.clientWidth * 0.4;
+    scrollRef.current.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
   };
+   
+
 
   return (
     <section
-      className="py-8 sm:py-10 lg:py-12 bg-[#122617]"
+      className="relative py-8 sm:py-10 lg:py-12 bg-[#122617]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* 標題區塊 */}
+        <div className="absolute top-1.5 left-1/2 -translate-x-1/2 z-10 text-white text-lg font-semibold">
+          影音推薦
+        </div>
+        <div className=" mx-auto px-0 sm:px-0 lg:px-0 relative">
+        {/* 漸層遮罩 */}
+        <div className="absolute left-0 w-16 sm:w-12 lg:w-60 h-full bg-gradient-to-r from-[#122617] to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 w-16 sm:w-12 lg:w-60 h-full bg-gradient-to-l from-[#122617] to-transparent pointer-events-none z-10"></div>
         {/* Arrow buttons */}
         {isHovered && showLeft && (
           <button
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/0 rounded-full shadow hover:bg-white/70"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/0 rounded-full shadow hover:bg-white/10"
             onClick={() => scroll("left")}
           >
-            ←
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
           </button>
         )}
         {isHovered && showRight && (
           <button
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/0 rounded-full shadow hover:bg-white/70"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/0 rounded-full shadow hover:bg-white/10"
             onClick={() => scroll("right")}
           >
-            →
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </button>
         )}
 
@@ -178,7 +198,7 @@ export default function VideoRecommendations() {
             <div
               key={video.id}
               ref={VideoRef}
-              className="group relative min-w-[280px] sm:min-w-[320px] lg:min-w-[400px] bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer overflow-hidden border border-gray-100"
+              className="group relative min-w-[280px] sm:min-w-[320px] lg:min-w-[400px] bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer overflow-hidden border border-gray-100 first:ml-30 last:mr-30"
             >
               {/* 影片縮圖區域 */}
               <div className="relative h-64 sm:h-80 overflow-hidden">
