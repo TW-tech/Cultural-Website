@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Slogan() {
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-[30px] py-6 sm:py-8 lg:py-[30px] box-border bg-[#FAF9EB]">
-      
+    <section className="w-full py-6 sm:py-8 lg:py-[30px] box-border bg-[#FAF9EB]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[9fr_7fr] overflow-hidden rounded-lg min-h-[400px] lg:min-h-[280px]">
 
           {/* 左側文字敘述 */}
@@ -42,7 +42,7 @@ export default function Slogan() {
             </div>
           </div>
         </div>
-      
+      </div>
     </section>
   );
 }
