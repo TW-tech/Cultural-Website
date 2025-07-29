@@ -14,17 +14,17 @@ export default function PartnerRecommendations() {
 
   return (
     <section className="pt-4 pb-2 sm:pt-6 sm:pb-3 lg:pt-8 lg:pb-4 bg-[#FAF9EB]">
-      <div className="w-full">
-        {/* 標題區塊 */}
-        <div className="text-center mb-8 sm:mb-10 px-4 sm:px-6 lg:px-8">
-          <p className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 max-w-3xl mx-auto leading-relaxed">
-            合作夥伴推薦
-          </p>
-        </div>
-        
-        {/* 合作夥伴卡片 - 4個一排有間距 */}
-        <div className="px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
+      <div className="w-full flex justify-center px-4 sm:px-6 lg:px-8">
+        <div className="w-full sm:w-[82%]">
+          {/* 標題區塊 */}
+          <div className="text-center mb-8 sm:mb-10">
+            <p className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 max-w-3xl mx-auto leading-relaxed">
+              合作夥伴推薦
+            </p>
+          </div>
+          
+          {/* 合作夥伴卡片 - 3個一排對齊Slogan */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {partnersData.map((partner, index) => (
               <div 
                 key={`${partner.id}-${index}`}
@@ -67,7 +67,7 @@ export default function PartnerRecommendations() {
               </div>
             </div>
           ))}
-        </div>
+          </div>
         </div>
       </div>
     </section>
