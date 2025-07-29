@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Slogan() {
   return (
     <section className="w-full py-6 sm:py-8 lg:py-[30px] box-border bg-[#FAF9EB]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[9fr_7fr] overflow-hidden rounded-lg min-h-[400px] lg:min-h-[280px]">
+      <div className="w-full flex justify-center px-4 sm:px-6 lg:px-8">
+        <div className="w-full sm:w-[64%] grid grid-cols-1 lg:grid-cols-[9fr_7fr] overflow-hidden rounded-lg min-h-[400px] lg:min-h-[280px]">
 
           {/* 左側文字敘述 */}
           <div className="flex items-center h-full p-4 sm:p-6 bg-[#103638] relative order-2 lg:order-1">
