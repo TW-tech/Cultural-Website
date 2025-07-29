@@ -13,3 +13,9 @@ prisma/generated/
 # Ignore environment files
 .env
 .env.*
+
+node_modules/
+.next/
+out/
+public/
+*.config.js
