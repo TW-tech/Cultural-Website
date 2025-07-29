@@ -132,7 +132,7 @@ export const carouselImagesData: CarouselImage[] = [
   {
     id: 3,
     src: "/images/museums/田中.jpg",
-    alt: "田中",
+    alt: "中正紀念堂",
     title: "田中",
     description: "田中達也特展-大師眼中的微型組合"
   }
