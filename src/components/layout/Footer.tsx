@@ -10,12 +10,12 @@ export default function Footer() {
             <div className="flex items-center mb-2 sm:mb-3 lg:mb-4">
               <Image
                 src="/icons/globe.svg"
-                alt="Cultural Website Logo"
+                alt="台灣文化記憶庫標誌"
                 width={20}
                 height={20}
                 className="sm:w-6 sm:h-6 lg:w-8 lg:h-8 mr-2 sm:mr-3 filter invert"
               />
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold">Cultural Website</h3>
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold">台灣文化記憶庫</h3>
             </div>
             <p className="text-xs sm:text-sm lg:text-base text-gray-400 mb-2 sm:mb-3 lg:mb-4 leading-relaxed">
               保存和分享世界文化多樣性，透過數位說故事和社群參與來傳承文化。
@@ -73,7 +73,7 @@ export default function Footer() {
         
         <div className="border-t border-gray-800 mt-4 sm:mt-6 lg:mt-8 pt-4 sm:pt-6 lg:pt-8 text-center">
           <p className="text-xs sm:text-sm text-gray-400">
-            © 2025 Cultural Website. 版權所有.
+            © 2025 台灣文化記憶庫. 版權所有.
           </p>
         </div>
       </div>

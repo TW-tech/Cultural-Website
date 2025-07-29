@@ -3,8 +3,8 @@ import "./globals.css";
 import { thePeakFont } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "Cultural Website - 文化傳承網站",
-  description: "保存和分享世界文化多樣性，透過數位說故事和社群參與來傳承文化",
+  title: "文化記憶庫",
+  description: "踏上一段穿越時空的文化旅程，發現各民族獨特的傳統、藝術與智慧",
 };
 
 export default function RootLayout({

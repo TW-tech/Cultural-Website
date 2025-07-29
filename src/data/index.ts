@@ -1,104 +1,137 @@
-import { Partner, CultureItem, VideoItem, CarouselImage } from '@/types';
-
 // 合作夥伴數據
+export interface Partner {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  category: string;
+  established: string;
+  website: string;
+}
+
 export const partnersData: Partner[] = [
   {
-    id: "cultural-heritage-foundation",
-    name: "文化遺產基金會",
-    description: "致力於保存和推廣台灣傳統文化的非營利組織，透過教育和研究活動傳承文化價值。",
-    image: "/images/culture/文化資產.png",
-    website: "https://example.com",
-    category: "文化保存"
+    id: "cultural-museum",
+    name: "「台語工藝詞庫」網站啟用 有助傳承台灣工藝與文化記憶",
+    description: "國立臺灣工藝研究發展中心的臺語網站，提供臺語文創、工藝知識與教學資源，推廣本土語言與文化傳承。",
+    image: "/images/partnerrecommendations/台灣工藝研究發展中心.jpg",
+    category: "教育機構",
+    established: "1985",
+    website: "https://kanggesu.ntcri.org.tw/NTCRI_TaigiWebSite/"
   },
   {
-    id: "digital-museum-network",
-    name: "數位博物館網絡",
-    description: "建構全台灣最大的數位文化資源平台，讓民眾能夠線上探索豐富的文化收藏。",
-    image: "/images/culture/文化品牌.jpg",
-    website: "https://example.com",
-    category: "數位典藏"
+    id: "heritage-foundation",
+    name: "懷舊列車動起來 鐵道博開放搭藍皮火車賞古蹟 可預約",
+    description: "國立鐵道博物館官方網站，呈現臺灣鐵道文化脈絡，典藏珍貴文物，提供豐富導覽與教育資源，傳承歷史記憶",
+    image: "/images/partnerrecommendations/國家鐵道博物館.jpg",
+    category: "博物館機構",
+    established: "1992",
+    website: "https://www.nrm.gov.tw/"
   },
   {
-    id: "cultural-education-alliance",
-    name: "文化教育聯盟",
-    description: "結合學校與文化機構，推動創新的文化教育計畫，培養下一代的文化素養。",
-    image: "/images/culture/文化記憶.JPG",
-    website: "https://example.com",
-    category: "教育推廣"
-  }
-];
-
-// 文化亮點數據
-export const cultureHighlightsData: CultureItem[] = [
-  {
-    id: "traditional-arts",
-    title: "傳統工藝",
-    description: "探索台灣豐富的傳統工藝文化，從陶瓷製作到織布技藝，每一項都蘊含著深厚的歷史底蘊。",
-    image: "/images/culture/文化資產.png",
-    category: "工藝文化"
-  },
-  {
-    id: "cultural-festivals",
-    title: "文化節慶",
-    description: "體驗台灣各地的特色節慶活動，感受不同族群的文化特色與節慶傳統。",
-    image: "/images/culture/文化品牌.jpg",
-    category: "節慶文化"
-  },
-  {
-    id: "historical-sites",
-    title: "歷史古蹟",
-    description: "走訪台灣重要的歷史古蹟，了解這片土地的歷史變遷與文化發展脈絡。",
-    image: "/images/culture/文化記憶.JPG",
-    category: "歷史文化"
-  },
-  {
-    id: "local-cuisine",
-    title: "在地美食",
-    description: "品味台灣各地的特色美食，從街頭小吃到精緻料理，感受飲食文化的魅力。",
-    image: "/images/culture/文化資產.png",
-    category: "飲食文化"
+    id: "cultural-education",
+    name: "百大文化基地計畫 新北黃金山城美學廊帶7月至11月推出「礦事聚作」遊程",
+    description: "臺灣煤礦博物館官網，保存煤礦歷史記憶，展現礦業文化風華，結合教育與觀光，深入探索臺灣產業發展的軌跡。",
+    image: "/images/partnerrecommendations/新平溪煤礦博物園區.jpg",
+    category: "保護機構",
+    established: "2001",
+    website: "https://www.taiwancoal.com.tw/web/"
   }
 ];
 
 // 影音推薦數據
-export const videoRecommendationsData: VideoItem[] = [
+export interface VideoRecommendation {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  duration: string;
+  category: string;
+}
+
+export const videosData: VideoRecommendation[] = [
   {
-    id: "cultural-documentary-1",
-    title: "台灣文化之美",
-    description: "深度探索台灣多元文化的紀錄片，帶您了解這片土地的文化故事。",
-    thumbnail: "/images/culture/文化品牌.jpg",
-    duration: "45:30"
+    id: "cultural-heritage-documentary",
+    title: "阿里山得獎咖啡如何帶地方走出創生？",
+    description: "阿里山得獎咖啡結合高山地景、職人技藝與青農返鄉行動，帶動地方產業轉型與文化重塑，成為地方創生的重要實踐案例。",
+    thumbnail: "/images/videorecommendations/阿里山咖啡園.jpg",
+    duration: "25:30",
+    category: "紀錄片"
   },
   {
-    id: "traditional-craft-tutorial",
-    title: "傳統工藝教學",
-    description: "跟著老師傅學習傳統工藝技法，體驗手作的溫度與文化傳承的價值。",
-    thumbnail: "/images/culture/文化記憶.JPG",
-    duration: "32:15"
+    id: "traditional-arts-workshop",
+    title: "竹鞘食器：在河床上的原民生態智慧體驗",
+    description: "結合魯凱傳統與環境倫理，運用竹鞘製作餐具，在河床野食中實踐無痕生活，展現原民生活智慧與自然共存的永續理念。",
+    thumbnail: "/images/videorecommendations/原民生態智慧.jpg",
+    duration: "18:45",
+    category: "教學"
+  }
+];
+
+// 文化知識數據
+export interface CultureKnowledge {
+  id: string;
+  title: string;
+  image: string;
+  position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+}
+
+export const cultureItemsData: CultureKnowledge[] = [
+  {
+    id: "traditional-arts",
+    title: "文化蛋糕圖",
+    image: "/images/culture/羽化黑熊.png",
+    position: "top-left"
+  },
+  {
+    id: "cultural-heritage",
+    title: "文化遺產",
+    image: "/images/culture/文化資產.png",
+    position: "top-right"
+  },
+  {
+    id: "cultural-memory",
+    title: "文化記憶",
+    image: "/images/culture/文化記憶.JPG",
+    position: "bottom-left"
+  },
+  {
+    id: "modern-culture",
+    title: "文化品牌",
+    image: "/images/culture/文化品牌.jpg",
+    position: "bottom-right"
   }
 ];
 
 // 輪播圖片數據
+export interface CarouselImage {
+  id: number;
+  src: string;
+  alt: string;
+  title: string;
+  description: string;
+}
+
 export const carouselImagesData: CarouselImage[] = [
   {
-    id: "chimei-museum",
-    src: "/images/museums/奇美博物館.jpg",
-    alt: "奇美博物館",
-    title: "奇美博物館",
-    description: "典藏豐富的藝術品與樂器，展現東西方文化的交融之美"
-  },
-  {
-    id: "fubon-art-museum",
-    src: "/images/museums/富邦美術館.jpg", 
-    alt: "富邦美術館",
-    title: "富邦美術館",
-    description: "當代藝術的殿堂，展示現代與傳統藝術的對話"
-  },
-  {
-    id: "palace-museum",
+    id: 1,
     src: "/images/museums/故宮_浮世之美.jpg",
     alt: "故宮浮世之美",
     title: "故宮浮世之美",
-    description: "故宮博物院特展，呈現東方藝術的深厚底蘊"
+    description: "故宮博物院經典展覽，展現東方藝術之美"
+  },
+  {
+    id: 2,
+    src: "/images/museums/奇美博物館.jpg",
+    alt: "奇美博物館",
+    title: "奇美博物館",
+    description: "台南奇美博物館的精彩展覽與文物收藏"
+  },
+  {
+    id: 3,
+    src: "/images/museums/田中.jpg",
+    alt: "田中",
+    title: "田中",
+    description: "田中達也特展-大師眼中的微型組合"
   }
 ];

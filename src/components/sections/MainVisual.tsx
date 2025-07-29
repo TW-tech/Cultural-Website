@@ -62,14 +62,14 @@ export default function MainVisual() {
       {/* header */}
       
       {/* 功能列 */}
-      <nav className="absolute top-4 left-0 right-0 z-20 flex justify-between items-center px-6">
+      <nav className="absolute top-4 left-0 right-0 z-20 flex justify-between items-center px-4 sm:px-6">
         {/* 左側三槓和語言切換 */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2 sm:space-x-4">
           {/* 三槓按鈕 */}
           <button className="flex flex-col justify-center items-center space-y-1 p-2 hover:bg-white/10 rounded-lg transition-colors duration-200">
-            <div className="w-6 h-0.5 bg-white rounded-full"></div>
-            <div className="w-6 h-0.5 bg-white rounded-full"></div>
-            <div className="w-6 h-0.5 bg-white rounded-full"></div>
+            <div className="w-5 h-0.5 sm:w-6 sm:h-0.5 bg-white rounded-full"></div>
+            <div className="w-5 h-0.5 sm:w-6 sm:h-0.5 bg-white rounded-full"></div>
+            <div className="w-5 h-0.5 sm:w-6 sm:h-0.5 bg-white rounded-full"></div>
           </button>
           
           {/* 語言切換按鈕 - 地球圖標 */}
@@ -79,12 +79,12 @@ export default function MainVisual() {
               title="切換語言"
               onClick={() => setIsLanguageOpen(!isLanguageOpen)}
             >
-              <svg className="w-5 h-5 text-white hover:text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white hover:text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" strokeWidth={1.5}/>
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" strokeWidth={1.5}/>
                 <path d="M2 12h20" strokeWidth={1.5}/>
               </svg>
-              <span className="text-xs text-white">{currentLanguage}</span>
+              <span className="text-xs text-white hidden sm:inline">{currentLanguage}</span>
             </button>
             
             {/* 下拉選單 */}
@@ -115,15 +115,15 @@ export default function MainVisual() {
                     setIsLanguageOpen(false);
                   }}
                 >
-                  🇯🇵 日本語
+                  🇯🇵 日文
                 </button>
               </div>
             )}
           </div>
         </div>
         
-        {/* 右側功能選項 */}
-        <div className="flex space-x-6">
+        {/* 右側功能選項 - 隱藏在小螢幕 */}
+        <div className="hidden md:flex space-x-4 lg:space-x-6">
           <a href="/" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
             首頁
           </a>
@@ -146,7 +146,7 @@ export default function MainVisual() {
       <div className="absolute inset-0">
         <Image
           src="/images/mainvisual/entry_pic2.jpg"
-          alt="文化網站主視覺"
+          alt="台灣文化記憶庫主視覺圖"
           fill
           className="object-cover"
           priority
