@@ -1,6 +1,6 @@
 # 貢獻指南 (Contributing Guide)
 
-感謝您對 Cultural Website 專案的興趣！這份指南將幫助您開始貢獻代碼。
+感謝您對台灣文化記憶庫專案的興趣！這份指南將幫助您開始貢獻程式碼。
 
 ## 🚀 快速開始
 
@@ -8,46 +8,46 @@
 - **Node.js**: 18.17.0 或更高版本
 - **npm**: 9.0.0 或更高版本
 - **Git**: 最新版本
-- **資料庫**: PostgreSQL (推薦) 或 SQLite (開發用)
+- **資料庫**: PostgreSQL（推薦）或 SQLite（開發用）
 
 ### 1. Fork 和 Clone 專案
 
 ```bash
-# Fork 專案到您的 GitHub 帳號，然後 clone
+# Fork 專案到您的 GitHub 帳號，然後複製
 git clone https://github.com/YOUR_USERNAME/Cultural-Website.git
 cd Cultural-Website
 ```
 
-### 2. 自動設置開發環境
+### 2. 自動設定開發環境
 
-**macOS/Linux:**
+**macOS/Linux：**
 ```bash
-# 執行自動設置腳本
+# 執行自動設定腳本
 ./setup.sh
 ```
 
-**Windows:**
+**Windows：**
 ```cmd
-# 執行自動設置腳本
+# 執行自動設定腳本
 setup.bat
 ```
 
-### 3. 手動設置 (如果自動設置失敗)
+### 3. 手動設定（如果自動設定失敗）
 
 ```bash
-# 1. 安裝依賴
+# 1. 安裝相依套件
 npm install
 
 # 2. 複製環境變數檔案
 cp .env.example .env
 
-# 3. 編輯 .env 文件並設置資料庫連接
+# 3. 編輯 .env 檔案並設定資料庫連線
 # DATABASE_URL="postgresql://username:password@localhost:5432/cultural_website"
 
-# 4. 生成 Prisma 客戶端
+# 4. 產生 Prisma 用戶端
 npm run db:generate
 
-# 5. 啟動開發服務器
+# 5. 啟動開發伺服器
 npm run dev
 ```
 

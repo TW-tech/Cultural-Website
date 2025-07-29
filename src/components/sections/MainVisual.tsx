@@ -146,7 +146,7 @@ export default function MainVisual() {
       <div className="absolute inset-0">
         <Image
           src="/images/mainvisual/entry_pic2.jpg"
-          alt="文化網站主視覺"
+          alt="台灣文化記憶庫主視覺"
           fill
           className="object-cover"
           priority

@@ -1,44 +1,44 @@
-# 字體系統設置指南 (Font System Setup Guide)
+# 字型系統設定指南 (Font System Setup Guide)
 
-本專案使用特殊的中文字體來增強文化真實感和視覺體驗。
+本專案使用台灣在地中文字型來增強文化真實感和視覺體驗。
 
-## 🎨 字體配置
+## 🎨 字型配置
 
-### 1. 辰宇落雁體 (標題字體)
-- **檔案**: `ChenYuluoyan-2.0-Thin.ttf`
-- **用途**: 主標題、重要標語
-- **CSS 類別**: `font-title`
-- **權重**: 300 (Thin)
-- **狀態**: ✅ 已配置
+### 1. 辰宇落雁體（標題字型）
+- **檔案**：`ChenYuluoyan-2.0-Thin.ttf`
+- **用途**：主標題、重要標語
+- **CSS 類別**：`font-chenyuluoyan`
+- **字重**：300（Thin）
+- **狀態**：✅ 已配置
 
-### 2. 隨峰體 (內文字體)
-- **檔案**: `ThePeakFontBeta_V0_102.ttf`
-- **用途**: 正文內容、描述文字
-- **CSS 類別**: `font-body`
-- **權重**: 400 (Regular)
-- **狀態**: ✅ 已配置
+### 2. 隨峰體（內文字型）
+- **檔案**：`ThePeakFontBeta_V0_102.ttf`
+- **用途**：正文內容、描述文字
+- **CSS 類別**：`font-thepeak`
+- **字重**：400（Regular）
+- **狀態**：✅ 已配置
 
-### 3. Inter (英文字體)
-- **來源**: Google Fonts
-- **用途**: 英文內容、介面文字
-- **CSS 類別**: `font-english`, `font-sans`
-- **權重**: 100-900 (Variable)
-- **狀態**: ✅ 已配置
+### 3. Inter（英文字型）
+- **來源**：Google Fonts
+- **用途**：英文內容、介面文字
+- **CSS 類別**：`font-english`、`font-sans`
+- **字重**：100-900（Variable）
+- **狀態**：✅ 已配置
 
 ## 📁 檔案結構
 
 ```
 public/fonts/
-├── ChenYuluoyan-2.0-Thin.ttf           # 辰宇落雁體 (已下載)
+├── ChenYuluoyan-2.0-Thin.ttf           # 辰宇落雁體（已下載）
 ├── ChenYuluoyan-Thin-Monospaced.ttf   # 等寬版本
-├── ThePeakFontBeta_V0_102.ttf          # 隨峰體 (已下載)
-├── license.txt                         # 字體授權
-└── README.md                           # 字體說明
+├── ThePeakFontBeta_V0_102.ttf          # 隨峰體（已下載）
+├── license.txt                         # 字型授權
+└── README.md                           # 字型說明
 ```
 
 ## 🔧 技術實作
 
-### 字體載入 (`src/lib/fonts.ts`)
+### 字型載入（`src/lib/fonts.ts`）
 ```typescript
 import localFont from 'next/font/local';
 import { Inter } from 'next/font/google';
