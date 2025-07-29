@@ -53,14 +53,16 @@ export default function ImageCarousel() {
   };
 
   return (
+
     <section className="py-8 sm:py-10 lg:py-12 bg-[#FAF9EB]">
       {/* 滿寬輪播容器 */}
       <div className="relative w-full group">
         {/* 三圖輪播區域 - 寬扁比例 */}
         <div className="relative h-[20rem] sm:h-[18rem] lg:h-[26rem] xl:h-[28rem] 2xl:h-[30rem] flex items-center justify-center gap-4 lg:gap-8 px-4 sm:px-6 lg:px-8">
+
             
             {/* 左側預覽圖 */}
-            <div className="hidden sm:block relative w-[18%] h-[60%] lg:h-[70%] opacity-60 hover:opacity-80 transition-all duration-300 cursor-pointer transform hover:scale-105">
+            <div className="hidden sm:block relative w-[18%] h-[60%] lg:h-[70%] xl:h-[75%] 2xl:h-[80%] opacity-60 hover:opacity-80 transition-all duration-300 cursor-pointer transform hover:scale-105">
               <div className="relative w-full h-full rounded-xl shadow-lg overflow-hidden"
                    onClick={prevSlide}>
                 <Image
@@ -102,7 +104,7 @@ export default function ImageCarousel() {
             </div>
 
             {/* 右側預覽圖 */}
-            <div className="hidden sm:block relative w-[18%] h-[60%] lg:h-[70%] opacity-60 hover:opacity-80 transition-all duration-300 cursor-pointer transform hover:scale-105">
+            <div className="hidden sm:block relative w-[18%] h-[60%] lg:h-[70%] xl:h-[75%] 2xl:h-[80%] opacity-60 hover:opacity-80 transition-all duration-300 cursor-pointer transform hover:scale-105">
               <div className="relative w-full h-full rounded-xl shadow-lg overflow-hidden"
                    onClick={nextSlide}>
                 <Image
