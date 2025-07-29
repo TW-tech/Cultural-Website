@@ -115,7 +115,7 @@ export default function MainVisual() {
                     setIsLanguageOpen(false);
                   }}
                 >
-                  🇯🇵 日本語
+                  🇯🇵 日文
                 </button>
               </div>
             )}
