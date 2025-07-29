@@ -34,7 +34,7 @@ export default function VideoRecommendations() {
       id: "cultural-heritage-documentary2",
       title: "菲律賓漁船如何搖身一變成為深度旅遊利器？",
       description: "菲律賓傳統螃蟹船，以其獨特的船舷支架聞名，最初為漁業和交通工具。如今，它搖身一變成為深度旅遊的利器，載著旅客探索島嶼，提供獨特的文化與自然體驗。",
-      thumbnail: "/images/videorecommendations/漁船.jpg",
+      thumbnail: "/images/videorecommendations/漁船.JPG",
       duration: "17:33",
       category: "紀錄片"
     },
@@ -58,7 +58,7 @@ export default function VideoRecommendations() {
       id: "traditional-arts-workshop2",
       title: "：澎湖海港文化體現在傳統漁獲保存方法",
       description: "澎湖海港文化體現在傳統漁獲保存的智慧與實踐中，是承載豐富歷史記憶與文化韌性的重要場域。",
-      thumbnail: "/images/videorecommendations/澎湖傳統漁獲.jpg",
+      thumbnail: "/images/videorecommendations/澎湖傳統漁獲.JPG",
       duration: "13:45",
       category: "教學"
     },
@@ -82,7 +82,7 @@ export default function VideoRecommendations() {
       id: "cultural-heritage-documentary6",
       title: "菲律賓漁船如何搖身一變成為深度旅遊利器？",
       description: "菲律賓傳統螃蟹船，以其獨特的船舷支架聞名，最初為漁業和交通工具。如今，它搖身一變成為深度旅遊的利器，載著旅客探索島嶼，提供獨特的文化與自然體驗。",
-      thumbnail: "/images/videorecommendations/漁船.jpg",
+      thumbnail: "/images/videorecommendations/漁船.JPG",
       duration: "17:33",
       category: "紀錄片"
     },
@@ -106,7 +106,7 @@ export default function VideoRecommendations() {
       id: "traditional-arts-workshop4",
       title: "：澎湖海港文化體現在傳統漁獲保存方法",
       description: "澎湖海港文化體現在傳統漁獲保存的智慧與實踐中，是承載豐富歷史記憶與文化韌性的重要場域。",
-      thumbnail: "/images/videorecommendations/澎湖傳統漁獲.jpg",
+      thumbnail: "/images/videorecommendations/澎湖傳統漁獲.JPG",
       duration: "13:45",
       category: "教學"
     },
