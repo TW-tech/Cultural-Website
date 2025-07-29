@@ -1,13 +1,6 @@
+import type { Partner } from "@/types";
+
 // 合作夥伴數據
-export interface Partner {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  category: string;
-  established: string;
-  website: string;
-}
 
 export const partnersData: Partner[] = [
   {
@@ -36,6 +29,15 @@ export const partnersData: Partner[] = [
     category: "保護機構",
     established: "2001",
     website: "https://www.taiwancoal.com.tw/web/"
+  },
+  {
+    id: "cultural-education",
+    name: "電影記憶與工藝技藝 台灣文化永續還差哪一哩路？",
+    description: "究竟傳承路上遇到哪些困難？如何喚醒現代人對影像技藝、工藝的文化記憶？展望未來，傳統該如何與現代接軌，不再讓文化永續淪於道德勸說？",
+    image: "/images/partnerrecommendations/今周大耳朵.jpg",
+    category: "專題報導",
+    established: "2015",
+    website: "https://south.npm.gov.tw/"
   }
 ];
 
