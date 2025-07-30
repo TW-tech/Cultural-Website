@@ -127,16 +127,16 @@ export default function MainVisual() {
           <a href="/" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
             首頁
           </a>
-          <a href="/about" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
+          <a href="/" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
             關於我們
           </a>
-          <a href="/culture" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
+          <a href="/" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
             文化探索
           </a>
-          <a href="/gallery" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
+          <a href="/" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
             影像藝廊
           </a>
-          <a href="/contact" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
+          <a href="/" className="text-white hover:text-white/80 transition-colors duration-300 text-sm font-medium">
             聯絡我們
           </a>
         </div>
