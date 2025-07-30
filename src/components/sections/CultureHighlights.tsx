@@ -125,8 +125,8 @@ export default function CultureHighlights() {
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 
-                {/* 遮罩和標題 */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* 遮罩和標題 - 手機顯示，電腦 hover 顯示 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4">
                     <h3 className="text-white font-bold text-sm sm:text-lg lg:text-xl text-shadow-lg">
                       {item.title}
@@ -134,8 +134,8 @@ export default function CultureHighlights() {
                   </div>
                 </div>
 
-                {/* 懸停效果邊框 */}
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-500/50 transition-colors duration-300"></div>
+                {/* 懸停效果邊框 - 只在桌面顯示 */}
+                <div className="absolute inset-0 border-2 border-transparent md:group-hover:border-blue-500/50 transition-colors duration-300"></div>
               </div>
             ))}
           </div>
