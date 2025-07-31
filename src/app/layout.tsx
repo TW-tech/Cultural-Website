@@ -14,7 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-TW">
-      <body className={thePeakFont.className}>
+
+      <body style={{ fontFamily: 'Microsoft JhengHei, sans-serif' }}>
         {children}
       </body>
     </html>
