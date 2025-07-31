@@ -84,7 +84,7 @@ export default function MainVisual() {
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" strokeWidth={1.5}/>
                 <path d="M2 12h20" strokeWidth={1.5}/>
               </svg>
-              <span className="text-xs text-amber-900 hidden sm:inline">{currentLanguage}</span>
+              <span className="text-xs text-amber-900 hidden sm:inline font-bold">{currentLanguage}</span>
             </button>
             
             {/* 下拉選單 */}
@@ -124,19 +124,19 @@ export default function MainVisual() {
         
         {/* 右側功能選項 - 隱藏在小螢幕 */}
         <div className="hidden md:flex space-x-4 lg:space-x-6">
-          <a href="/" className="text-amber-900 hover:text-amber-800 transition-colors duration-300 text-sm font-medium">
+          <a href="/" className="text-amber-900 hover:text-amber-800 transition-colors duration-300 text-sm font-bold">
             首頁
           </a>
-          <a href="/" className="text-amber-900 hover:text-amber-800 transition-colors duration-300 text-sm font-medium">
+          <a href="/" className="text-amber-900 hover:text-amber-800 transition-colors duration-300 text-sm font-bold">
             關於我們
           </a>
-          <a href="/" className="text-amber-900 hover:text-amber-800 transition-colors duration-300 text-sm font-medium">
+          <a href="/" className="text-amber-900 hover:text-amber-800 transition-colors duration-300 text-sm font-bold">
             文化探索
           </a>
-          <a href="/" className="text-amber-900 hover:text-amber-800 transition-colors duration-300 text-sm font-medium">
+          <a href="/" className="text-amber-900 hover:text-amber-800 transition-colors duration-300 text-sm font-bold">
             影像藝廊
           </a>
-          <a href="/" className="text-amber-900 hover:text-amber-800 transition-colors duration-300 text-sm font-medium">
+          <a href="/" className="text-amber-900 hover:text-amber-800 transition-colors duration-300 text-sm font-bold">
             聯絡我們
           </a>
         </div>
