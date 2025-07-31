@@ -2,117 +2,9 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-
-interface VideoRecommendation {
-  id: string;
-  title: string;
-  description: string;
-  thumbnail: string;
-  duration: string;
-  category: string;
-}
+import { videosData } from "@/data";
 
 export default function VideoRecommendations() {
-  const videos: VideoRecommendation[] = [
-     {
-      id: "cultural-heritage-documentary1",
-      title: "阿里山得獎咖啡如何帶地方走出創生？",
-      description: "阿里山得獎咖啡結合高山地景、職人技藝與青農返鄉行動，帶動地方產業轉型與文化重塑，成為地方創生的重要實踐案例。",
-      thumbnail: "/images/videorecommendations/阿里山咖啡園.jpg",
-      duration: "25:30",
-      category: "紀錄片"
-    },
-    {
-      id: "traditional-arts-workshop1",
-      title: "竹鞘食器：在河床上的原民生態智慧體驗",
-      description: "結合魯凱傳統與環境倫理，運用竹鞘製作餐具，在河床野食中實踐無痕生活，展現原民生活智慧與自然共存的永續理念。",
-      thumbnail: "/images/videorecommendations/原民生態智慧.jpg",
-      duration: "18:45",
-      category: "教學"
-    },
-     {
-      id: "cultural-heritage-documentary2",
-      title: "菲律賓漁船如何搖身一變成為深度旅遊利器？",
-      description: "菲律賓傳統螃蟹船，以其獨特的船舷支架聞名，最初為漁業和交通工具。如今，它搖身一變成為深度旅遊的利器，載著旅客探索島嶼，提供獨特的文化與自然體驗。",
-      thumbnail: "/images/videorecommendations/漁船.JPG",
-      duration: "17:33",
-      category: "紀錄片"
-    },
-    {
-      id: "cultural-heritage-documentary3",
-      title: "當傳統文化遇上疫情？談文化彈性與應變",
-      description: "當泰國傳統舞蹈遇疫情，舞者戴上防疫面具，展現文化彈性與應變。這不僅是視覺衝擊，更是藝術適應與傳承韌性的象徵。",
-      thumbnail: "/images/videorecommendations/疫情泰國.jpg",
-      duration: "38:45",
-      category: "紀錄片"
-    },
-    {
-      id: "cultural-heritage-documentary4",
-      title: "奈及利亞傳統活動展現傳統文化舞蹈",
-      description: "奈及利亞傳統活動透過多元的文化舞蹈，不僅展現各族群獨特認同與生活智慧，更是傳承歷史、連結信仰的重要儀式與文化載體。",
-      thumbnail: "/images/videorecommendations/奈及利亞.jpg",
-      duration: "22:10",
-      category: "紀錄片"
-    },
-    {
-      id: "traditional-arts-workshop2",
-      title: "：澎湖海港文化體現在傳統漁獲保存方法",
-      description: "澎湖海港文化體現在傳統漁獲保存的智慧與實踐中，是承載豐富歷史記憶與文化韌性的重要場域。",
-      thumbnail: "/images/videorecommendations/澎湖傳統漁獲.JPG",
-      duration: "13:45",
-      category: "教學"
-    },
-    {
-      id: "cultural-heritage-documentary5",
-      title: "阿里山得獎咖啡如何帶地方走出創生？",
-      description: "阿里山得獎咖啡結合高山地景、職人技藝與青農返鄉行動，帶動地方產業轉型與文化重塑，成為地方創生的重要實踐案例。",
-      thumbnail: "/images/videorecommendations/阿里山咖啡園.jpg",
-      duration: "25:30",
-      category: "紀錄片"
-    },
-    {
-      id: "traditional-arts-workshop3",
-      title: "竹鞘食器：在河床上的原民生態智慧體驗",
-      description: "結合魯凱傳統與環境倫理，運用竹鞘製作餐具，在河床野食中實踐無痕生活，展現原民生活智慧與自然共存的永續理念。",
-      thumbnail: "/images/videorecommendations/原民生態智慧.jpg",
-      duration: "18:45",
-      category: "教學"
-    },
-     {
-      id: "cultural-heritage-documentary6",
-      title: "菲律賓漁船如何搖身一變成為深度旅遊利器？",
-      description: "菲律賓傳統螃蟹船，以其獨特的船舷支架聞名，最初為漁業和交通工具。如今，它搖身一變成為深度旅遊的利器，載著旅客探索島嶼，提供獨特的文化與自然體驗。",
-      thumbnail: "/images/videorecommendations/漁船.JPG",
-      duration: "17:33",
-      category: "紀錄片"
-    },
-    {
-      id: "cultural-heritage-documentary7",
-      title: "當傳統文化遇上疫情？談文化彈性與應變",
-      description: "當泰國傳統舞蹈遇疫情，舞者戴上防疫面具，展現文化彈性與應變。這不僅是視覺衝擊，更是藝術適應與傳承韌性的象徵。",
-      thumbnail: "/images/videorecommendations/疫情泰國.jpg",
-      duration: "38:45",
-      category: "紀錄片"
-    },
-    {
-      id: "cultural-heritage-documentary8",
-      title: "奈及利亞傳統活動展現傳統文化舞蹈",
-      description: "奈及利亞傳統活動透過多元的文化舞蹈，不僅展現各族群獨特認同與生活智慧，更是傳承歷史、連結信仰的重要儀式與文化載體。",
-      thumbnail: "/images/videorecommendations/奈及利亞.jpg",
-      duration: "22:10",
-      category: "紀錄片"
-    },
-    {
-      id: "traditional-arts-workshop4",
-      title: "：澎湖海港文化體現在傳統漁獲保存方法",
-      description: "澎湖海港文化體現在傳統漁獲保存的智慧與實踐中，是承載豐富歷史記憶與文化韌性的重要場域。",
-      thumbnail: "/images/videorecommendations/澎湖傳統漁獲.JPG",
-      duration: "13:45",
-      category: "教學"
-    },
-    // ➕ Add more if needed
-  ];
-
   const scrollRef = useRef<HTMLDivElement>(null);
   const VideoRef = useRef<HTMLDivElement>(null);
   const [showLeft, setShowLeft] = useState(false);
@@ -194,7 +86,7 @@ export default function VideoRecommendations() {
           ref={scrollRef}
           className="flex space-x-6 overflow-x-auto scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden scrollbar-hide"
         >
-          {videos.map((video) => (
+          {videosData.map((video) => (
             <div
               key={video.id}
               ref={VideoRef}

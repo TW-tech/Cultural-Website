@@ -35,6 +35,22 @@ export interface CarouselImage {
   description?: string;
 }
 
+export interface CultureKnowledge {
+  id: string;
+  title: string;
+  image: string;
+  position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+}
+
+export interface VideoRecommendation {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  duration: string;
+  category: string;
+}
+
 // API 響應類型
 export interface ApiResponse<T> {
   data: T;
