@@ -43,7 +43,7 @@ export default function VideoRecommendations() {
     scrollRef.current.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
   };
    
-
+//jira
 
   return (
     <section
