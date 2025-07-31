@@ -155,18 +155,18 @@ export default function VideoRecommendations() {
 
   return (
     <section
-      className="relative py-8 sm:py-10 lg:py-12 bg-[#122617]"
+      className="relative py-8 sm:py-10 lg:py-12 bg-[#CC6915]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
         {/* 標題區塊 */}
-        <div className="absolute top-1.5 left-1/2 -translate-x-1/2 z-10 text-white text-lg sm:text-xl lg:text-2xl font-semibold">
+        <div className="absolute top-1.5 left-1/2 -translate-x-1/2 z-10 text-black text-lg sm:text-xl lg:text-2xl font-semibold">
           影音推薦
         </div>
         <div className=" mx-auto px-0 sm:px-0 lg:px-0 relative">
         {/* 漸層遮罩 */}
-        <div className="absolute left-0 w-16 sm:w-12 lg:w-60 h-full bg-gradient-to-r from-[#122617] to-transparent pointer-events-none z-10"></div>
-        <div className="absolute right-0 w-16 sm:w-12 lg:w-60 h-full bg-gradient-to-l from-[#122617] to-transparent pointer-events-none z-10"></div>
+        <div className="absolute left-0 w-16 sm:w-12 lg:w-60 h-full bg-gradient-to-r from-[#CC6915] to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 w-16 sm:w-12 lg:w-60 h-full bg-gradient-to-l from-[#CC6915] to-transparent pointer-events-none z-10"></div>
         {/* Arrow buttons */}
         {isHovered && showLeft && (
           <button
