@@ -15,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
 
-      <body style={{ fontFamily: 'Microsoft JhengHei, sans-serif' }}>
+      <body style={{ 
+          fontFamily: '"Microsoft YaHei", "Microsoft YaHei UI", "微軟雅黑", "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif',
+        }}>
         {children}
       </body>
     </html>
