@@ -145,14 +145,14 @@ export default function MainVisual() {
       {/* 背景大圖 */}
       <div className="absolute inset-0">
         <Image
-          src="/images/mainvisual/entry_pic2.jpg"
+          src="/images/mainvisual/entry_pic.jpg"
           alt="台灣文化記憶庫主視覺圖"
           fill
           className="object-cover"
           priority
         />
-        {/* 深色遮罩層 */}
-        <div className="absolute inset-0 bg-black/20"></div>
+        {/* 橘色半透明遮罩層 */}
+        <div className="absolute inset-0 bg-orange-500/30"></div>
       </div>
       
       {/* 內容層 */}
