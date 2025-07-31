@@ -4,50 +4,16 @@ import Image from "next/image";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { cultureItemsData } from "@/data";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
-
-interface CultureKnowledge {
-  id: string;
-  title: string;
-  image: string;
-  position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
-}
 
 export default function CultureHighlights() {
   // Animation refs
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
-
-  // 文化知識數據
-  const cultureItems: CultureKnowledge[] = [
-    {
-      id: "traditional-arts",
-      title: "文化蛋糕圖",
-      image: "/images/culture/羽化黑熊.png",
-      position: "top-left"
-    },
-    {
-      id: "cultural-heritage",
-      title: "文化遺產",
-      image: "/images/culture/文化資產.png",
-      position: "top-right"
-    },
-    {
-      id: "cultural-memory",
-      title: "文化記憶",
-      image: "/images/culture/文化記憶.JPG",
-      position: "bottom-left"
-    },
-    {
-      id: "modern-culture",
-      title: "文化品牌",
-      image: "/images/culture/文化品牌.jpg",
-      position: "bottom-right"
-    }
-  ];
 
   // GSAP Animations
   useEffect(() => {
@@ -112,7 +78,7 @@ export default function CultureHighlights() {
         {/* 文化知識容器 - 長方形 2x2 排列 */}
         <div className="w-full">
           <div ref={gridRef} className="aspect-[3/2] sm:aspect-[2/1] grid grid-cols-2 grid-rows-2 gap-1 sm:gap-2 lg:gap-4 bg-[#FAF9EB] sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden">
-            {cultureItems.map((item) => (
+            {cultureItemsData.map((item) => (
               <div 
                 key={item.id}
                 className="group relative overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg"

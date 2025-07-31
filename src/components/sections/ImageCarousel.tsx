@@ -2,50 +2,26 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { carouselImagesData } from "@/data";
 
 export default function ImageCarousel() {
-  // 輪播圖片數據 (使用原始尺寸比例)
-  const carouselImages = [
-    {
-      id: 1,
-      src: "/images/museums/奇美博物館.jpg",
-      alt: "奇美博物館",
-      title: "奇美博物館",
-      description: "典藏豐富的藝術品與樂器，展現東西方文化的交融之美"
-    },
-    {
-      id: 2,
-      src: "/images/museums/富邦美術館.jpg", 
-      alt: "富邦美術館",
-      title: "富邦美術館",
-      description: "當代藝術的殿堂，展示現代與傳統藝術的對話"
-    },
-    {
-      id: 3,
-      src: "/images/museums/田中.jpg",
-      alt: "田中",
-      title: "中正紀念堂",
-      description: "田中達也特展-大師眼中的微型組合"
-    }
-  ];
-
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // 自動輪播
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+      setCurrentSlide((prev) => (prev + 1) % carouselImagesData.length);
     }, 4000); // 4秒切換一次
 
     return () => clearInterval(timer);
-  }, [carouselImages.length]);
+  }, []);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    setCurrentSlide((prev) => (prev + 1) % carouselImagesData.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+    setCurrentSlide((prev) => (prev - 1 + carouselImagesData.length) % carouselImagesData.length);
   };
 
   const goToSlide = (index: number) => {
@@ -65,8 +41,8 @@ export default function ImageCarousel() {
               <div className="relative w-full h-full rounded-xl shadow-lg overflow-hidden"
                    onClick={prevSlide}>
                 <Image
-                  src={carouselImages[(currentSlide - 1 + carouselImages.length) % carouselImages.length].src}
-                  alt={carouselImages[(currentSlide - 1 + carouselImages.length) % carouselImages.length].alt}
+                  src={carouselImagesData[(currentSlide - 1 + carouselImagesData.length) % carouselImagesData.length].src}
+                  alt={carouselImagesData[(currentSlide - 1 + carouselImagesData.length) % carouselImagesData.length].alt}
                   fill
                   className="object-cover"
                   sizes="18vw"
@@ -83,8 +59,8 @@ export default function ImageCarousel() {
             {/* 中間主圖 */}
             <div className="relative w-full sm:w-[64%] h-full rounded-2xl shadow-2xl overflow-hidden">
               <Image
-                src={carouselImages[currentSlide].src}
-                alt={carouselImages[currentSlide].alt}
+                src={carouselImagesData[currentSlide].src}
+                alt={carouselImagesData[currentSlide].alt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 64vw"
@@ -94,10 +70,10 @@ export default function ImageCarousel() {
               {/* 主圖標題和描述 */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                  {carouselImages[currentSlide].title}
+                  {carouselImagesData[currentSlide].title}
                 </h3>
                 <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
-                  {carouselImages[currentSlide].description}
+                  {carouselImagesData[currentSlide].description}
                 </p>
               </div>
             </div>
@@ -107,8 +83,8 @@ export default function ImageCarousel() {
               <div className="relative w-full h-full rounded-xl shadow-lg overflow-hidden"
                    onClick={nextSlide}>
                 <Image
-                  src={carouselImages[(currentSlide + 1) % carouselImages.length].src}
-                  alt={carouselImages[(currentSlide + 1) % carouselImages.length].alt}
+                  src={carouselImagesData[(currentSlide + 1) % carouselImagesData.length].src}
+                  alt={carouselImagesData[(currentSlide + 1) % carouselImagesData.length].alt}
                   fill
                   className="object-cover"
                   sizes="18vw"
@@ -146,7 +122,7 @@ export default function ImageCarousel() {
 
           {/* 輪播指示器 */}
           <div className="flex justify-center mt-6 sm:mt-8 space-x-3">
-            {carouselImages.map((_, index) => (
+            {carouselImagesData.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
